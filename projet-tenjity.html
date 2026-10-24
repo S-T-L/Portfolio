@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alternance : ajout de fonctionnalités, refactorisation et intégration du module d'accessibilité web Tenjity (Vue.js 3).">
+  <title>Module d'accessibilité Tenjity — Estelle · Développeuse web</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230b0a09%27/%3E%3Ctext x=%2732%27 y=%2747%27 font-family=%27Impact,sans-serif%27 font-size=%2740%27 fill=%27%23a57865%27 text-anchor=%27middle%27%3EE%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+
+  <nav class="menu" aria-label="Navigation principale">
+    <div class="menu__corps">
+      <a class="marque" href="index.html"><span class="marque__nom">ESTELLE</span><span class="marque__ext">.DEV</span></a>
+      <button class="menu__bouton" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-liens">≡</button>
+      <div class="menu__liens" id="menu-liens">
+        <a href="index.html#accueil">Accueil</a>
+        <a href="index.html#parcours">À propos</a>
+        <a href="index.html#projets" aria-current="true">Réalisations</a>
+        <a href="index.html#veille">Veille</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="menu__pied">
+        <a href="https://www.linkedin.com/in/estelle-f-b1318629b" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/S-T-L" target="_blank" rel="noopener">GitHub</a>
+        <small>© 2026 Estelle</small>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="intro-page">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="interieur">
+        <p class="fil etiquette"><a href="index.html#projets">Réalisations</a><span>Alternance</span></p>
+        <h1>Module d'accessibilité<em>Tenjity</em></h1>
+        <p class="intro-page__texte">Ajout de fonctionnalités, refactorisation et intégration d'un module d'accessibilité web embarqué sur des sites tiers, développé en Vue.js 3.</p>
+        <div class="intro-page__meta">
+          <span class="badge">Alternance</span>
+          <div class="puces puces--sombre"><span>Vue.js 3</span><span>JavaScript</span><span>SCSS</span><span>Nuxt 3</span><span>Git / GitHub</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bloc bloc--clair">
+      <div class="interieur">
+        <div class="projet-page">
+          <div>
+            <div class="rubrique apparait">
+              <span class="etiquette">Contexte</span>
+              <h2>Un module existant que j'ai fait évoluer.</h2>
+              <p>Tenjity est un module d'accessibilité web : un widget JavaScript qui s'injecte sur n'importe quel site et propose à l'internaute un zoom (page, module, texte), une loupe, un curseur agrandi, une règle de lecture, des filtres couleur, un mode sombre, une police pour dyslexiques, ainsi que des profils d'accessibilité regroupant plusieurs réglages.</p>
+              <p><strong>Je n'ai pas créé ce module</strong> : je suis intervenue dessus pour y ajouter de nouvelles fonctionnalités.</p>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Nouvelles fonctionnalités</span>
+              <h2>Ce que j'ai ajouté au module.</h2>
+              <ul>
+                <li><strong>Sélection multi-profils</strong> : activer plusieurs profils d'accessibilité en même temps, avec conservation cohérente des réglages de chacun.</li>
+                <li><strong>Zoom du module et zoom du texte</strong> : ajout de ces deux niveaux de zoom en plus du zoom page, réorganisation du zoom page existant, et passage de tous les contrôles de zoom en curseurs (sliders).</li>
+                <li><strong>Regroupement des trois zooms</strong> dans un composant <code>AccessibilityZoom</code> dédié, rattaché au profil « Déficiences visuelles ».</li>
+              </ul>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Refactorisation</span>
+              <h2>Réorganiser le code.</h2>
+              <p>Suite à l'ajout de nombreuses nouvelles fonctionnalités, tout vivait dans <code>App.vue</code>.</p>
+              <ul>
+                <li><strong>Découpage de <code>App.vue</code></strong> (« god component ») : environ 1 400 lignes retirées du fichier, logique répartie par domaine dans une dizaine de composables (<code>useCursor</code>, <code>useMagnifier</code>, <code>useProfileSystem</code>, <code>useModuleUI</code>, <code>useScreenRuler</code>, <code>useScreenReader</code>, <code>useTranslation</code>, <code>useContentFilter</code>, <code>useDyslexicFont</code>…), passage en Composition API.</li>
+                <li><strong>Extraction de l'état des zooms dans un composable <code>useZoom.js</code></strong> : <code>AccessibilityZoom.vue</code> devient purement présentationnel. Suppression des accès défensifs à une référence de composant potentiellement nulle et d'un mécanisme de sauvegarde / restauration d'état devenu inutile.</li>
+              </ul>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Correctifs</span>
+              <h2>Bugs corrigés.</h2>
+              <ul>
+                <li>Robustesse au <code>localStorage</code> corrompu du site hôte (try/catch au chargement des profils).</li>
+                <li>Persistance des filtres couleur, du mode sombre et de l'état de zoom d'une page à l'autre (sauvegarde en <code>localStorage</code> et restauration au montage).</li>
+                <li>Zoom perdu lors de la réactivation d'un profil, ou de la combinaison zoom + curseur.</li>
+                <li>Loupe : état conservé au changement de profil, compensation du zoom CSS manquant, clavier virtuel tronqué.</li>
+                <li>Police pour dyslexiques non appliquée au conteneur du module lui-même.</li>
+                <li>Suppression de code mort (ancien système de « zoom visuel »).</li>
+              </ul>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Stack</span>
+              <h2>Outils utilisés.</h2>
+              <div class="puces"><span>Vue.js 3 (Composition API)</span><span>JavaScript</span><span>SCSS</span><span>Vite</span><span>Nuxt 3</span><span>Git / GitHub</span></div>
+            </div>
+          </div>
+          <div class="projet-page__media">
+            <figure class="figure-projet apparait">
+              <img src="assets/projets/tenjity-zooms.png" alt="Panneau Zooms du module Tenjity : curseurs Zoom de la page (150 %), Zoom du module (130 %) et Zoom du texte (100 %)">
+              <figcaption>Les trois zooms du module Tenjity</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="suite">
+          <a href="index.html#projets" class="btn btn--contour">← Toutes les réalisations</a>
+          <a href="index.html#contact" class="btn">Discutons-en →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <span>© 2026 Estelle — Développeuse web</span>
+    <nav class="pied__liens" aria-label="Liens de bas de page">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="prive/login.php">Espace enseignants</a>
+      <a href="#">Haut de page ↑</a>
+    </nav>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

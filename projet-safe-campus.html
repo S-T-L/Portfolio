@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAE : plateforme web de prévention des conduites à risques en milieu universitaire, front Nuxt et back Laravel / Filament.">
+  <title>Safe Campus — Estelle · Développeuse web</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230b0a09%27/%3E%3Ctext x=%2732%27 y=%2747%27 font-family=%27Impact,sans-serif%27 font-size=%2740%27 fill=%27%23a57865%27 text-anchor=%27middle%27%3EE%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+
+  <nav class="menu" aria-label="Navigation principale">
+    <div class="menu__corps">
+      <a class="marque" href="index.html"><span class="marque__nom">ESTELLE</span><span class="marque__ext">.DEV</span></a>
+      <button class="menu__bouton" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-liens">≡</button>
+      <div class="menu__liens" id="menu-liens">
+        <a href="index.html#accueil">Accueil</a>
+        <a href="index.html#parcours">À propos</a>
+        <a href="index.html#projets" aria-current="true">Réalisations</a>
+        <a href="index.html#veille">Veille</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="menu__pied">
+        <a href="https://www.linkedin.com/in/estelle-f-b1318629b" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/S-T-L" target="_blank" rel="noopener">GitHub</a>
+        <small>© 2026 Estelle</small>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="intro-page">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="interieur">
+        <p class="fil etiquette"><a href="index.html#projets">Réalisations</a><span>SAE</span></p>
+        <h1>Safe Campus<em>Front Nuxt et back Laravel</em></h1>
+        <p class="intro-page__texte">Plateforme web de prévention et d'accompagnement des conduites à risques en milieu universitaire : santé mentale, conduites addictives, violences sexistes et sexuelles.</p>
+        <div class="intro-page__meta">
+          <span class="badge">SAE</span>
+          <div class="puces puces--sombre"><span>Nuxt 4</span><span>Vue 3</span><span>Laravel</span><span>Filament</span><span>PostgreSQL</span><span>Docker</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bloc bloc--clair">
+      <div class="interieur">
+        <div class="projet-page">
+          <div>
+            <div class="rubrique apparait">
+              <span class="etiquette">Contexte</span>
+              <h2>Un projet parti de zéro.</h2>
+              <p>Safe Campus s'inscrit dans le Schéma Directeur de la Vie Étudiante (SDVE) 2025-2029. L'objectif : permettre à un·e étudiant·e de trouver rapidement la bonne ressource ou le bon contact, sur mobile comme sur ordinateur, avec une interface lisible et rassurante sur des sujets sensibles.</p>
+              <p>J'ai défini la stack avec un collègue développeur, puis travaillé avec l'équipe communication à partir de ses maquettes mobiles. Le projet est découpé en deux parties : un <strong>back</strong> qui gère les contenus et les met à disposition via une API, et un <strong>front</strong> qui les affiche.</p>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Choix techniques</span>
+              <h2>La stack retenue.</h2>
+              <ul>
+                <li><strong>Laravel + Filament</strong> pour le back : l'ORM Eloquent gère un modèle à plusieurs niveaux de relations (thème → sous-thème → contacts, médias), et Filament génère le back-office à partir des modèles.</li>
+                <li><strong>PostgreSQL</strong> : contraintes de clés étrangères adaptées à un modèle très relié.</li>
+                <li><strong>Nuxt 4 / Vue 3</strong> pour le front : structure par fichiers alignée sur le découpage par thème.</li>
+                <li><strong>Docker</strong> pour un environnement identique sur tous les postes, et <strong>git flow</strong> : une branche par fonctionnalité, fusionnée dans <code>dev</code> après validation du responsable du projet.</li>
+              </ul>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Front</span>
+              <h2>Le site des étudiants.</h2>
+              <p>Page d'accueil par grandes thématiques, sous-thèmes sous forme de cartes, fiches contact et ressources, organisés en composants réutilisables. J'ai ensuite fait évoluer cette première version :</p>
+              <ul>
+                <li><strong>De vraies pages à la place des pop-ups</strong> : chaque fiche a sa propre adresse, partageable et indexable, et le bouton « retour » fonctionne. Deux composants et plus de 400 lignes de style devenus inutiles ont été supprimés.</li>
+                <li><strong>Des adresses lisibles</strong>, composées de mots-clés plutôt que de numéros.</li>
+                <li><strong>Une carte Leaflet avec géolocalisation</strong> : avec l'accord de l'utilisateur, le contact le plus proche s'affiche en tête de liste. Un refus ou un échec ne bloque pas la page.</li>
+                <li><strong>Une version grand écran</strong> déclinée pour ordinateur.</li>
+              </ul>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Back · Comptes</span>
+              <h2>Inscription et rôles.</h2>
+              <p>Les comptes du back-office étaient ajoutés à la main en base. J'ai conçu un parcours complet : une personne s'inscrit, son compte reste en attente, puis un administrateur le valide et lui attribue un rôle.</p>
+              <ul>
+                <li>Ajout d'un rôle <strong>admin</strong> dédié à la gestion des comptes, en s'appuyant sur les policies Laravel existantes plutôt que sur un paquet de permissions surdimensionné.</li>
+                <li>Règles définies avec le responsable du projet : liste de rôles fixe et verrouillée en base, un admin ne peut pas modifier son propre compte, premier admin créé à l'installation depuis des variables d'environnement.</li>
+                <li>43 tests automatisés, dont l'un a révélé une faille (attribution d'un rôle non proposé via une requête forgée), corrigée.</li>
+              </ul>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Back · Sécurité</span>
+              <h2>Sécurité et traçabilité.</h2>
+              <ul>
+                <li><strong>Mots de passe</strong> : politique établie après comparaison CNIL / ANSSI / NIST, refus des mots de passe ayant fuité (Have I Been Pwned, par k-anonymat) et limite à 72 caractères liée à bcrypt.</li>
+                <li><strong>Revue de sécurité</strong> de mon propre code : deux défauts trouvés et corrigés (doublons d'email selon la casse, erreur 500 sur une donnée mal typée).</li>
+                <li><strong>Suppression sans perte</strong> : supprimer un rédacteur effaçait ses histoires en cascade. Ses histoires sont désormais transférées à un autre rédacteur, dans une transaction.</li>
+                <li><strong>Logs d'audit</strong> : qui a fait quoi et quand, en JSON, sans aucun secret, conservés un an conformément au RGPD.</li>
+              </ul>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Back · Histoires interactives</span>
+              <h2>Des histoires « dont vous êtes le héros ».</h2>
+              <p>L'étudiant lit une situation, choisit comment réagir, et l'histoire se poursuit selon son choix jusqu'à une fin favorable ou défavorable, cette dernière affichant les contacts d'aide adaptés. J'ai pris en charge toute cette partie côté back :</p>
+              <ul>
+                <li><strong>Base de données</strong> : histoires, scènes et choix, avec un circuit éditorial (brouillon → relecture → validé → publié).</li>
+                <li><strong>API</strong> : une seule requête renvoie l'histoire complète au front, chargée en eager loading pour éviter le problème N+1. Logique métier isolée dans des services.</li>
+                <li><strong>Outils du rédacteur</strong> dans le back-office : liaison des choix aux scènes, prévisualisation de l'histoire clic après clic, guide intégré.</li>
+                <li>31 tests au total.</li>
+              </ul>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Stack</span>
+              <h2>Outils utilisés.</h2>
+              <div class="puces"><span>Nuxt 4</span><span>Vue 3</span><span>Leaflet</span><span>Laravel</span><span>Filament</span><span>PostgreSQL</span><span>Docker</span><span>Git / GitHub</span></div>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Code source</span>
+              <h2>Aller plus loin.</h2>
+              <div class="docs">
+                <a href="https://github.com/S-T-L/Safe-Campus-front" target="_blank" rel="noopener">Dépôt GitHub — front</a>
+                <a href="https://github.com/S-T-L/Safe-Campus-back" target="_blank" rel="noopener">Dépôt GitHub — back</a>
+              </div>
+            </div>
+          </div>
+          <div class="projet-page__media">
+            <figure class="figure-projet apparait">
+              <img src="assets/projets/safecampus-carte.png" alt="Carte Leaflet de Safe Campus avec le bouton « Me géolocaliser » et la liste des contacts">
+              <figcaption>Carte des contacts avec géolocalisation</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="suite">
+          <a href="index.html#projets" class="btn btn--contour">← Toutes les réalisations</a>
+          <a href="index.html#contact" class="btn">Discutons-en →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <span>© 2026 Estelle — Développeuse web</span>
+    <nav class="pied__liens" aria-label="Liens de bas de page">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="prive/login.php">Espace enseignants</a>
+      <a href="#">Haut de page ↑</a>
+    </nav>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio d'Estelle, développeuse web en reconversion — parcours, réalisations, veille et contact.">
+  <title>Portfolio — Estelle · Développeuse web</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230b0a09%27/%3E%3Ctext x=%2732%27 y=%2747%27 font-family=%27Impact,sans-serif%27 font-size=%2740%27 fill=%27%23a57865%27 text-anchor=%27middle%27%3EE%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+
+  <nav class="menu" aria-label="Navigation principale">
+    <div class="menu__corps">
+      <a class="marque" href="#accueil"><span class="marque__nom">ESTELLE</span><span class="marque__ext">.DEV</span></a>
+      <button class="menu__bouton" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-liens">≡</button>
+      <div class="menu__liens" id="menu-liens">
+        <a href="#accueil">Accueil</a>
+        <a href="#parcours">À propos</a>
+        <a href="#projets">Réalisations</a>
+        <a href="#veille">Veille</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="menu__pied">
+        <a href="https://www.linkedin.com/in/estelle-f-b1318629b" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/S-T-L" target="_blank" rel="noopener">GitHub</a>
+        <small>© 2026 Estelle</small>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ACCUEIL -->
+    <header class="accroche" id="accueil">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="accroche__contenu">
+        <p class="accroche__sur">Estelle · Portfolio</p>
+        <h1 class="accroche__titre"><span class="ligne"><span>Développeuse</span></span><span class="ligne"><em>web</em></span></h1>
+      </div>
+      <a class="accroche__bas" href="#parcours">Découvrir</a>
+    </header>
+
+    <!-- À PROPOS -->
+    <section class="bloc bloc--clair" id="parcours">
+      <div class="interieur">
+        <div class="entete apparait">
+          <h2 class="entete__titre">À propos de moi</h2>
+        </div>
+        <div class="propos">
+          <div class="duo apparait">
+            <figure><img src="assets/a-propos/avant.jpg" alt="Ancien métier : éducatrice sportive" loading="lazy"><figcaption>Éducatrice sportive</figcaption></figure>
+            <figure><img src="assets/a-propos/apres.jpg" alt="Nouveau métier : développeuse web" loading="lazy"><figcaption>Développeuse web</figcaption></figure>
+          </div>
+          <div class="propos__texte apparait">
+            <p>Après une expérience de <strong>10 ans en tant qu'éducatrice sportive</strong>, j'ai choisi de réorienter ma carrière vers le développement informatique, un domaine qui me passionne et que j'ai commencé à explorer en autodidacte.</p>
+            <p>J'ai fait le choix d'autofinancer ma reprise d'études avec un BTS SIO, que je poursuis aujourd'hui en licence professionnelle en alternance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATION -->
+    <section class="bloc bloc--sombre" aria-labelledby="t-formation">
+      <div class="interieur">
+        <div class="entete apparait">
+          <h2 class="entete__titre" id="t-formation">Formation</h2>
+        </div>
+        <ol class="frise apparait">
+          <li><div class="frise__an">2012</div><div class="frise__titre">Bac Sciences et technologies</div><div class="frise__info">Obtention en 2012</div></li>
+          <li><div class="frise__an">2014</div><div class="frise__titre">BPJEPS Activités Aquatiques</div><div class="frise__info">Formation en 2014</div></li>
+          <li><div class="frise__an">2025</div><div class="frise__titre">BTS Services informatiques</div><div class="frise__info">Obtenu en juillet 2025 · Option : Solutions logicielles et applications métiers · CNED</div></li>
+          <li><div class="frise__an">2026</div><div class="frise__titre">Licence professionnelle métiers de l'informatique : Application web</div><div class="frise__info">En cours</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- RÉALISATIONS -->
+    <section class="bloc bloc--clair" id="projets">
+      <div class="interieur">
+        <div class="entete apparait">
+          <h2 class="entete__titre">Mes réalisations</h2>
+        </div>
+
+        <h3 class="groupe apparait">Alternance &amp; stages</h3>
+        <div class="projets">
+          <a class="projet apparait" href="projet-tenjity.html">
+            <div class="projet__visuel projet__visuel--vide"><span aria-hidden="true">VUE</span><em class="projet__badge">Alternance</em></div>
+            <div class="projet__corps">
+              <h4 class="projet__titre">Module d'accessibilité Tenjity</h4>
+              <p class="projet__sous">Accessibilité web embarquée</p>
+              <p class="projet__desc">Ajout de fonctionnalités, refactorisation et intégration d'un module d'accessibilité web embarqué sur des sites tiers, développé en Vue.js 3.</p>
+              <div class="projet__bas"><div class="puces"><span>Vue.js 3</span><span>JavaScript</span><span>Nuxt 3</span></div><span class="fleche" aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="projet apparait" href="projet-safe-campus.html">
+            <div class="projet__visuel"><img src="assets/projets/safecampus-carte.png" alt="" loading="lazy"><em class="projet__badge">Alternance</em></div>
+            <div class="projet__corps">
+              <h4 class="projet__titre">Safe Campus</h4>
+              <p class="projet__sous">Front Nuxt et back Laravel</p>
+              <p class="projet__desc">Plateforme web de prévention des conduites à risques en milieu universitaire : santé mentale, addictions, violences sexistes et sexuelles.</p>
+              <div class="projet__bas"><div class="puces"><span>Nuxt 4</span><span>Laravel</span><span>PostgreSQL</span></div><span class="fleche" aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="projet apparait" href="projet-laon.html">
+            <div class="projet__visuel"><img src="assets/projets/laon-appli-mobile.jpg" alt="" loading="lazy"><em class="projet__badge">Stage</em></div>
+            <div class="projet__corps">
+              <h4 class="projet__titre">Application mobile Ville de Laon</h4>
+              <p class="projet__sous">Inscription aux services scolaires</p>
+              <p class="projet__desc">Module d'inscription aux services scolaires ajouté à l'application mobile de la ville, développé en WinDev Mobile.</p>
+              <div class="projet__bas"><div class="puces"><span>WinDev Mobile</span><span>HFSQL</span><span>WLangage</span></div><span class="fleche" aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="projet apparait" href="projet-mqtt.html">
+            <div class="projet__visuel"><img src="assets/projets/mqtt-cathedrale.png" alt="" loading="lazy"><em class="projet__badge">Stage</em></div>
+            <div class="projet__corps">
+              <h4 class="projet__titre">Protocole MQTT</h4>
+              <p class="projet__sous">Récupération des données</p>
+              <p class="projet__desc">Connexion à un broker MQTT pour récupérer et exploiter les données de fréquentation de la cathédrale.</p>
+              <div class="projet__bas"><div class="puces"><span>MQTT</span><span>HFSQL</span><span>WLangage</span></div><span class="fleche" aria-hidden="true">→</span></div>
+            </div>
+          </a>
+        </div>
+
+        <h3 class="groupe apparait">Ateliers professionnels</h3>
+        <div class="projets">
+          <a class="projet apparait" href="projet-mediatek-formation.html">
+            <div class="projet__visuel"><img src="assets/projets/formation-header.jpg" alt="" loading="lazy"><em class="projet__badge">Atelier pro</em></div>
+            <div class="projet__corps">
+              <h4 class="projet__titre">Mediatek Formation</h4>
+              <p class="projet__sous">Faire évoluer un site Symfony</p>
+              <p class="projet__desc">Évolution d'un site Symfony de formations en ligne pour MediaTek86, réseau de médiathèques de la Vienne.</p>
+              <div class="projet__bas"><div class="puces"><span>Symfony</span><span>PHP</span><span>Doctrine</span></div><span class="fleche" aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="projet apparait" href="projet-mediatek-documents.html">
+            <div class="projet__visuel projet__visuel--vide"><span aria-hidden="true">C#</span><em class="projet__badge">Atelier pro</em></div>
+            <div class="projet__corps">
+              <h4 class="projet__titre">Mediatek Documents</h4>
+              <p class="projet__sous">Application C# reliée à une API PHP</p>
+              <p class="projet__desc">Application desktop de gestion documentaire pour MediaTek86, appuyée sur une API REST en PHP et une base MySQL.</p>
+              <div class="projet__bas"><div class="puces"><span>C#</span><span>PHP</span><span>MySQL</span></div><span class="fleche" aria-hidden="true">→</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VEILLE -->
+    <section class="bloc bloc--sombre" id="veille">
+      <div class="interieur">
+        <div class="entete apparait">
+          <h2 class="entete__titre">Outils de veille</h2>
+        </div>
+        <div class="outils">
+          <div class="outil apparait"><h3>Alertes</h3><p>Google Alerts<br>Raindrop — ajout d'articles</p></div>
+          <div class="outil apparait"><h3>Réseaux</h3><p>Suivi sur LinkedIn</p></div>
+          <div class="outil apparait"><h3>Sites web</h3><p>Sites spécialisés (Actu IA, Le Monde Informatique...)</p></div>
+          <div class="outil apparait"><h3>Autoformation</h3><p>CNIL · Grafikart · OpenClassrooms</p></div>
+        </div>
+
+        <div class="note">
+          <div class="apparait">
+            <span class="etiquette">Note de veille · veille technologique</span>
+            <h3>L'intelligence artificielle et <em>la protection des données</em></h3>
+            <p>L'intelligence artificielle suscite de plus en plus d'intérêt, surtout en raison de son développement rapide ces dernières années. De plus en plus présente dans notre quotidien, l'IA est utilisée dans de nombreux métiers, offrant des outils puissants pour améliorer l'efficacité et résoudre des problèmes complexes. Cependant, avec ces avancées, il est important de rester vigilant sur les questions de sécurité et de protection des données. Une veille sur l'IA permet de suivre son évolution et de mieux comprendre ses impacts.</p>
+
+            <div class="lectures" id="lectures" hidden>
+              <h4>Dernières lectures</h4>
+              <ol class="lectures__liste"></ol>
+              <a class="lectures__tout" href="https://developer-tools-mail.raindrop.page/" target="_blank" rel="noopener">Toute ma veille sur Raindrop ↗</a>
+            </div>
+          </div>
+          <div class="liens apparait">
+            <h4>Sites consultés régulièrement</h4>
+            <a href="https://www.cnil.fr/fr" target="_blank" rel="noopener">La CNIL</a>
+            <a href="https://www.actuia.com/" target="_blank" rel="noopener">Actu IA</a>
+            <a href="https://www.lemondeinformatique.fr/" target="_blank" rel="noopener">Le Monde Informatique</a>
+            <a href="https://thehackernews.com/" target="_blank" rel="noopener">The Hacker News</a>
+            <a href="https://www.developpez.com/" target="_blank" rel="noopener">Developpez.com</a>
+            <h4>Sites pour l'autoformation</h4>
+            <a href="https://openclassrooms.com/fr" target="_blank" rel="noopener">OpenClassrooms</a>
+            <a href="https://atelier-rgpd.cnil.fr/" target="_blank" rel="noopener">L'atelier RGPD de la CNIL</a>
+            <a href="https://grafikart.fr/" target="_blank" rel="noopener">Grafikart</a>
+            <a href="https://learn.microsoft.com/fr-fr/dotnet/csharp/tour-of-csharp/tutorials/" target="_blank" rel="noopener">Learn Microsoft — Tutoriel C#</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="bloc bloc--clair" id="contact">
+      <div class="interieur">
+        <div class="entete apparait">
+          <h2 class="entete__titre">Contactez-moi</h2>
+        </div>
+        <div class="contact contact--seul">
+          <div class="apparait">
+            <p class="contact__texte">Une proposition, une question sur un projet ? Écrivez-moi sur LinkedIn ou retrouvez-moi sur GitHub.</p>
+            <a class="canal" href="https://www.linkedin.com/in/estelle-f-b1318629b" target="_blank" rel="noopener"><span><small>LinkedIn</small><strong>linkedin.com/in/estelle-f</strong></span><span aria-hidden="true">↗</span></a>
+            <a class="canal" href="https://github.com/S-T-L" target="_blank" rel="noopener"><span><small>GitHub</small><strong>github.com/S-T-L</strong></span><span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <span>© 2026 Estelle — Développeuse web</span>
+    <nav class="pied__liens" aria-label="Liens de bas de page">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="prive/login.php">Espace enseignants</a>
+      <a href="#accueil">Haut de page ↑</a>
+    </nav>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

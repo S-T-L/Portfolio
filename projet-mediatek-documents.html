@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atelier professionnel : application C# reliée à une API PHP pour la gestion documentaire de MediaTek86.">
+  <title>Mediatek Documents — Estelle · Développeuse web</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230b0a09%27/%3E%3Ctext x=%2732%27 y=%2747%27 font-family=%27Impact,sans-serif%27 font-size=%2740%27 fill=%27%23a57865%27 text-anchor=%27middle%27%3EE%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+
+  <nav class="menu" aria-label="Navigation principale">
+    <div class="menu__corps">
+      <a class="marque" href="index.html"><span class="marque__nom">ESTELLE</span><span class="marque__ext">.DEV</span></a>
+      <button class="menu__bouton" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-liens">≡</button>
+      <div class="menu__liens" id="menu-liens">
+        <a href="index.html#accueil">Accueil</a>
+        <a href="index.html#parcours">À propos</a>
+        <a href="index.html#projets" aria-current="true">Réalisations</a>
+        <a href="index.html#veille">Veille</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="menu__pied">
+        <a href="https://www.linkedin.com/in/estelle-f-b1318629b" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/S-T-L" target="_blank" rel="noopener">GitHub</a>
+        <small>© 2026 Estelle</small>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="intro-page">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="interieur">
+        <p class="fil etiquette"><a href="index.html#projets">Réalisations</a><span>Atelier pro</span></p>
+        <h1>Mediatek Documents<em>Application C# reliée à une API PHP</em></h1>
+        <p class="intro-page__texte">Application desktop de gestion documentaire pour MediaTek86, appuyée sur une API REST en PHP et une base MySQL.</p>
+        <div class="intro-page__meta">
+          <span class="badge">Atelier pro</span>
+          <div class="puces puces--sombre"><span>C#</span><span>PHP</span><span>MySQL</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bloc bloc--clair">
+      <div class="interieur">
+        <div class="projet-page">
+          <div>
+            <div class="rubrique apparait">
+              <span class="etiquette">Contexte</span>
+              <h2>Moderniser la gestion documentaire.</h2>
+              <p>MediaTek86 souhaitait moderniser son système de gestion documentaire. La solution repose sur une application desktop en C#, appuyée sur une API REST en PHP et une base de données MySQL. Le système gère des documents variés — livres, DVD, CD, revues — et permet leur consultation ainsi que la gestion des emprunts.</p>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Missions</span>
+              <h2>Ce que j'ai développé.</h2>
+              <ul>
+                <li>Ajout d'onglets pour la gestion des commandes de livres, DVD et revues.</li>
+                <li>Mise en place de l'authentification avec gestion des droits par rôle.</li>
+                <li>Correction de failles de sécurité et mise en place de la journalisation (logs).</li>
+                <li>Tests unitaires (package Model) et tests fonctionnels via Postman.</li>
+                <li>Déploiement de l'API et création d'un installateur pour l'application C#.</li>
+                <li>Gestion des sauvegardes de données.</li>
+              </ul>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Stack</span>
+              <h2>Outils utilisés.</h2>
+              <div class="puces"><span>C#</span><span>Visual Studio 2019</span><span>PHP</span><span>NetBeans</span><span>MySQL</span></div>
+            </div>
+
+            <div class="rubrique apparait">
+              <span class="etiquette">Documents</span>
+              <h2>Aller plus loin.</h2>
+              <div class="docs">
+                <a href="assets/projets/docs/documents-cahier-des-charges.pdf" target="_blank" rel="noopener">Cahier des charges</a>
+                <a href="assets/projets/docs/documents-missions.pdf" target="_blank" rel="noopener">Missions</a>
+                <a href="assets/projets/docs/documents-contexte.pdf" target="_blank" rel="noopener">Contexte détaillé</a>
+              </div>
+              <div class="boutons">
+                <a href="https://github.com/S-T-L/MediaTekDocuments/blob/master/Fichiers%20d'installation/MediatekDocuments86.msi" target="_blank" rel="noopener" class="btn btn--contour">Installateur de l'application</a>
+                <a href="https://github.com/S-T-L/MediaTekDocuments" target="_blank" rel="noopener" class="btn btn--contour"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> Dépôt GitHub — application</a>
+                <a href="https://github.com/S-T-L/rest_mediatekdocuments" target="_blank" rel="noopener" class="btn btn--contour"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> Dépôt GitHub — API</a>
+                <a href="https://stl-dev.qabox.fr/rest_mediatekdocuments_doc/index.html" target="_blank" rel="noopener" class="btn btn--contour">Documentation de l'API</a>
+                <a href="https://stl-dev.qabox.fr/Help/index.html" target="_blank" rel="noopener" class="btn btn--contour">Documentation de l'application</a>
+              </div>
+            </div>
+          </div>
+          <div class="projet-page__media">
+            <div class="video apparait">
+              <a class="video__lancer" href="https://www.youtube.com/watch?v=qH1gW2zH62w" data-video="qH1gW2zH62w" data-titre="Présentation vidéo — Mediatek Documents">
+                <img src="assets/projets/videos/mediatek-documents.jpg" alt="" loading="lazy">
+                <span class="video__bouton">▶ Lire la vidéo (YouTube)</span>
+              </a>
+            </div>
+            <p class="video__info">Contenu fourni par YouTube. La lecture implique le dépôt de cookies et la transmission de votre adresse IP à Google, conformément à sa <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité</a>.</p>
+          </div>
+        </div>
+
+        <div class="suite">
+          <a href="index.html#projets" class="btn btn--contour">← Toutes les réalisations</a>
+          <a href="index.html#contact" class="btn">Discutons-en →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <span>© 2026 Estelle — Développeuse web</span>
+    <nav class="pied__liens" aria-label="Liens de bas de page">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="prive/login.php">Espace enseignants</a>
+      <a href="#">Haut de page ↑</a>
+    </nav>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

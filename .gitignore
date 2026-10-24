@@ -1,0 +1,22 @@
+# Configuration locale
+prive/config.php
+prive/fiches/
+prive-data/
+
+# Éditeur et outils
+.vscode/
+.claude/settings.local.json
+
+# Fichiers système
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Archives et sauvegardes
+*.zip
+*.bak
+
+# Variables d'environnement
+.env
+.env.*
+secrets/
