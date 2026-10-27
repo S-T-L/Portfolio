@@ -42,8 +42,49 @@
 
     <section class="bloc bloc--clair">
       <div class="interieur">
-        <p class="texte-intro">Ces fiches font le lien entre les projets présentés dans ce portfolio et les compétences du référentiel BTS SIO.</p>
-        <div class="fiches">
+        <p class="texte-intro">Ces fiches font le lien entre les projets présentés dans ce portfolio et les compétences du référentiel BTS SIO. Chaque projet est rappelé en quelques lignes, suivi de ses fiches et de ses liens utiles.</p>
+        <div class="fiches fiches--projets">
+
+          <article class="carte fiche-projet">
+            <div class="fiche-projet__tete">
+              <span class="badge">Alternance</span>
+              <span class="fiche-projet__compte">1 fiche</span>
+            </div>
+            <h3>Module d'accessibilité Tenjity</h3>
+            <p class="fiche-projet__sous">Accessibilité web embarquée</p>
+            <p>Ajout de fonctionnalités, refactorisation et intégration d'un module d'accessibilité web embarqué sur des sites tiers, développé en Vue.js 3.</p>
+            <div class="puces"><span>Vue.js 3</span><span>JavaScript</span><span>SCSS</span><span>Nuxt 3</span></div>
+            <span class="etiquette fiche-projet__titre">Fiches réflectives</span>
+            <div class="docs docs--fiches">
+              <a href="fiche.php?f=tenjity" target="_blank" rel="noopener">Fiche réflective</a>
+            </div>
+            <div class="fiche-projet__liens">
+              <a href="../projet-tenjity.html">Voir le projet</a>
+            </div>
+          </article>
+
+          <article class="carte fiche-projet">
+            <div class="fiche-projet__tete">
+              <span class="badge">SAE</span>
+              <span class="fiche-projet__compte">3 fiches</span>
+            </div>
+            <h3>Safe Campus</h3>
+            <p class="fiche-projet__sous">Front Nuxt et back Laravel</p>
+            <p>Plateforme web de prévention et d'accompagnement des conduites à risques en milieu universitaire : santé mentale, conduites addictives, violences sexistes et sexuelles.</p>
+            <div class="puces"><span>Nuxt 4</span><span>Laravel</span><span>Filament</span><span>PostgreSQL</span><span>Docker</span></div>
+            <span class="etiquette fiche-projet__titre">Fiches réflectives</span>
+            <div class="docs docs--fiches">
+              <a href="fiche.php?f=safe-campus-1" target="_blank" rel="noopener">Fiche réflective 1</a>
+              <a href="fiche.php?f=safe-campus-2" target="_blank" rel="noopener">Fiche réflective 2</a>
+              <a href="fiche.php?f=safe-campus-3" target="_blank" rel="noopener">Fiche réflective 3</a>
+            </div>
+            <div class="fiche-projet__liens">
+              <a href="../projet-safe-campus.html">Voir le projet</a>
+              <a href="https://github.com/S-T-L/Safe-Campus-front" target="_blank" rel="noopener">GitHub front</a>
+              <a href="https://github.com/S-T-L/Safe-Campus-back" target="_blank" rel="noopener">GitHub back</a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>

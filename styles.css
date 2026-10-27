@@ -1,6 +1,6 @@
 /* Portfolio — Estelle · style noir & cuivre */
 
-/* Polices hébergées localement (fichiers officiels Google Fonts) — mêmes graisses que l'ancien appel à Google */
+/* Polices hébergées localement (fichiers officiels Google Fonts) */
 @font-face { font-family: "Bebas Neue"; src: url("assets/fonts/BebasNeue-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Montserrat"; src: url("assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype"); font-weight: 300 600; font-style: normal; font-display: swap; }
 @font-face { font-family: "Montserrat"; src: url("assets/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype"); font-weight: 300; font-style: italic; font-display: swap; }
@@ -298,6 +298,22 @@ a.carte:hover { border-color: var(--cuivre); transform: translateY(-4px); box-sh
 .carte h3 { font-family: var(--titre); font-weight: 400; font-size: 28px; letter-spacing: .05em; line-height: 1.05; margin: 10px 0 8px; }
 .carte p { font-size: 14px; color: var(--txt-sombre-2); }
 .fiches { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.fiches--projets { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+.fiche-projet { display: flex; flex-direction: column; gap: 12px; }
+.fiche-projet:hover { border-color: rgba(165, 120, 101, .6); }
+.fiche-projet__tete { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.fiche-projet__compte { font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--txt-sombre-2); }
+.carte.fiche-projet h3 { margin: 8px 0 0; font-size: 32px; }
+.carte .fiche-projet__sous { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--cuivre-sombre); }
+.fiche-projet__titre { margin-top: 14px; }
+.docs--fiches a::after { content: "PDF ↗"; font-size: 10px; font-weight: 600; letter-spacing: .16em; }
+.fiche-projet__liens { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: auto; padding-top: 18px; }
+.fiche-projet__liens a { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--txt-sombre); transition: color .25s; }
+.fiche-projet__liens a::after { content: " ↗"; color: var(--cuivre); }
+.fiche-projet__liens a:hover { color: var(--cuivre-sombre); }
+@media (max-width: 680px) {
+  .fiches--projets { grid-template-columns: 1fr; }
+}
 .connexion { max-width: 480px; }
 .connexion > p { margin: 12px 0 26px; font-size: 15px; color: var(--txt-sombre-2); }
 .formulaire--simple { grid-template-columns: 1fr; }
