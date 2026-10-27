@@ -4,6 +4,7 @@ require_once __DIR__ . '/../config.php';
 
 date_default_timezone_set('Europe/Paris');
 
+// Durées en secondes : 30 min, 2 h, 15 min, 180 jours
 const SESSION_INACTIVITE = 1800;
 const SESSION_DUREE_MAX = 7200;
 const SESSION_RENOUVELLEMENT = 900;

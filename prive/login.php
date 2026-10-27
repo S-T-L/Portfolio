@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/session.php';
 
+// Après chaque échec, attente de 1, 2, 4, 8… secondes (30 s au plus), remise à zéro après 15 min sans échec.
 const PAUSE_MAX = 30;
 const PAUSE_REMISE_A_ZERO = 900;
 

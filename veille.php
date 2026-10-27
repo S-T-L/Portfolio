@@ -1,6 +1,5 @@
 <?php
 // Relais des flux RSS des collections Raindrop « IA » et « Protection des données » vers le portfolio (section Veille).
-// Renvoie les 5 articles les plus récents, toutes collections confondues, en JSON : titre, lien, source (nom de domaine), date d'enregistrement.
 // Le résultat est mis en cache 15 min pour ne pas interroger Raindrop à chaque visite.
 
 const FLUX = [
@@ -38,7 +37,6 @@ if (!$fluxLus) {
     exit;
 }
 
-// du plus récent au plus ancien, toutes collections confondues
 usort($items, function ($a, $b) {
     return strtotime((string) $b->pubDate) - strtotime((string) $a->pubDate);
 });
