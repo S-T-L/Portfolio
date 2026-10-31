@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <nav class="menu" aria-label="Navigation principale">
     <div class="menu__corps">
-      <a class="marque" href="../index.html"><span class="marque__nom">ESTELLE</span><span class="marque__ext">.DEV</span></a>
+      <a class="marque" href="../index.html"><img src="../assets/logo-ef.svg" alt="Estelle, développeuse web : retour à l'accueil"></a>
       <button class="menu__bouton" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-liens">≡</button>
       <div class="menu__liens" id="menu-liens">
         <a href="../index.html">Accueil</a>

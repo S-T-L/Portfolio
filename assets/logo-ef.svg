@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="46 37 183 181" width="183" height="181" role="img" aria-label="Logo EF">
+<defs>
+<linearGradient id="cu" gradientUnits="userSpaceOnUse" x1="46" y1="37" x2="229" y2="218">
+<stop offset="0" stop-color="#dc9a74"/>
+<stop offset="0.55" stop-color="#b06a47"/>
+<stop offset="1" stop-color="#c98a65"/>
+</linearGradient>
+</defs>
+<rect x="47.5" y="38.5" width="180" height="178" rx="40" ry="40" fill="none" stroke="url(#cu)" stroke-width="3"/>
+<g fill="url(#cu)">
+<rect x="82" y="96" width="52" height="3.2" rx="1"/>
+<rect x="142" y="96" width="51" height="3.2" rx="1"/>
+<rect x="82" y="126.8" width="49" height="3.2" rx="1"/>
+<rect x="141" y="126.8" width="44" height="3.2" rx="1"/>
+<rect x="141" y="126.8" width="3.2" height="34.2" rx="1"/>
+<rect x="82" y="158" width="49" height="3.2" rx="1"/>
+</g>
+</svg>

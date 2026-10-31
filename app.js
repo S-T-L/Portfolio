@@ -71,4 +71,21 @@
       lien.replaceWith(lecteur);
     });
   });
+
+  // Formulaire de contact envoyé sans rechargement — sans JS, contact.php redirige vers la section Contact
+  var formulaire = document.getElementById('formulaire-contact');
+  if (formulaire && window.fetch) {
+    var retour = formulaire.querySelector('.contact__retour'), envoyer = formulaire.querySelector('button');
+    var afficher = function (ok, message) { retour.textContent = message; retour.classList.toggle('erreur', !ok); };
+    formulaire.addEventListener('submit', function (e) {
+      e.preventDefault();
+      envoyer.disabled = true;
+      afficher(true, 'Envoi en cours…');
+      fetch(formulaire.action, { method: 'POST', body: new FormData(formulaire), headers: { Accept: 'application/json' } })
+        .then(function (r) { return r.json(); })
+        .then(function (rep) { afficher(rep.ok, rep.message); if (rep.ok) formulaire.reset(); })
+        .catch(function () { afficher(false, "L'envoi a échoué, réessayez plus tard ou écrivez-moi sur LinkedIn."); })
+        .then(function () { envoyer.disabled = false; });
+    });
+  }
 })();

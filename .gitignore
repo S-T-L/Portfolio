@@ -3,6 +3,9 @@ prive/config.php
 prive/fiches/
 prive-data/
 
+# Dépendances Composer (réinstallées avec « composer install »)
+vendor/
+
 # Éditeur et outils
 .vscode/
 .claude/settings.local.json
