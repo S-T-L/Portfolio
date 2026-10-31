@@ -113,6 +113,8 @@ img { display: block; max-width: 100%; }
 .propos__texte p { font-size: clamp(16px, 1.5vw, 18.5px); font-weight: 300; line-height: 1.85; color: var(--txt-sombre-2); }
 .propos__texte p + p { margin-top: 18px; }
 .propos__texte strong { color: var(--txt-sombre); font-weight: 600; }
+.propos__cv { margin-top: 32px; }
+.propos__cv small { font-size: .7em; letter-spacing: .08em; opacity: .7; }
 
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .duo figure { position: relative; aspect-ratio: 3 / 4; overflow: hidden; border-radius: 4px; background: var(--encre-3); }

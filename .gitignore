@@ -2,6 +2,7 @@
 prive/config.php
 prive/fiches/
 prive-data/
+assets/a-propos/cv-estelle-friedt.pdf
 
 # Dépendances Composer (réinstallées avec « composer install »)
 vendor/
