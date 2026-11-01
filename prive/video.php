@@ -1,8 +1,6 @@
 <?php
-// Envoi du CV vidéo : le fichier est rangé hors du site, dans prive-data/videos.
 require_once __DIR__ . '/includes/auth-check.php';
 
-// Liste fixe : seules ces vidéos peuvent être demandées.
 const VIDEOS = [
     'cv' => 'cv-video.mp4',
 ];
