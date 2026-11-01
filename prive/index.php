@@ -43,7 +43,6 @@
 
     <section class="bloc bloc--clair">
       <div class="interieur">
-        <p class="texte-intro">Ces fiches font le lien entre les projets présentés dans ce portfolio et les compétences du référentiel BTS SIO. Chaque projet est rappelé en quelques lignes, suivi de ses fiches et de ses liens utiles.</p>
         <div class="fiches fiches--projets">
 
           <article class="carte fiche-projet">
