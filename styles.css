@@ -89,7 +89,7 @@ img { display: block; max-width: 100%; }
 @keyframes grain { 25% { transform: translate(-3%, 2%); } 50% { transform: translate(2%, -3%); } 75% { transform: translate(-2%, -1%); } }
 
 .accroche__contenu { text-align: center; padding: 0 20px; }
-.accroche__sur { font-size: 11px; font-weight: 500; letter-spacing: .5em; text-transform: uppercase; color: var(--cuivre-clair); margin-bottom: 26px; }
+.accroche__sur { font-size: 18px; font-weight: 500; letter-spacing: .4em; text-transform: uppercase; color: var(--cuivre-clair); margin-bottom: 26px; }
 .accroche__titre { font-family: var(--titre); font-weight: 400; line-height: .92; letter-spacing: .05em; font-size: clamp(54px, 10vw, 150px); color: var(--txt-clair); }
 .accroche__titre em { font-style: normal; color: var(--cuivre); }
 /* révélation par le bas : chaque ligne monte depuis un masque */
