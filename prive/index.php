@@ -20,6 +20,7 @@
       <div class="menu__liens" id="menu-liens">
         <a href="../index.html">Accueil</a>
         <a href="index.php" aria-current="true">Fiches réflectives</a>
+        <a href="#cv-video">CV vidéo</a>
         <a href="logout.php">Se déconnecter</a>
       </div>
       <div class="menu__pied">
@@ -80,12 +81,24 @@
             </div>
             <div class="fiche-projet__liens">
               <a href="../projet-safe-campus.html">Voir le projet</a>
-              <a href="https://github.com/S-T-L/Safe-Campus-front" target="_blank" rel="noopener">GitHub front</a>
-              <a href="https://github.com/S-T-L/Safe-Campus-back" target="_blank" rel="noopener">GitHub back</a>
+              <a href="https://github.com/Korrighed/safe-campus-front" target="_blank" rel="noopener">GitHub front</a>
+              <a href="https://github.com/Korrighed/safe-campus-back" target="_blank" rel="noopener">GitHub back</a>
             </div>
           </article>
 
         </div>
+      </div>
+    </section>
+
+    <section class="bloc bloc--sombre" id="cv-video">
+      <div class="interieur">
+        <div class="entete">
+          <h2 class="entete__titre">CV vidéo</h2>
+        </div>
+        <video class="video-cv" controls preload="metadata">
+          <source src="video.php?v=cv" type="video/mp4">
+          Votre navigateur ne peut pas lire cette vidéo.
+        </video>
       </div>
     </section>
 

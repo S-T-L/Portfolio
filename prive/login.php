@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <div class="interieur">
         <div class="carte connexion">
           <span class="etiquette">Connexion</span>
-          <p>Cet espace est réservé aux enseignants évaluateurs. Il contient mes fiches réflectives liées aux projets présentés.</p>
+          <p>Cet espace est réservé aux enseignants.</p>
           <form class="formulaire formulaire--simple" method="post" novalidate>
             <input type="hidden" name="csrf" value="<?= htmlspecialchars($_SESSION['csrf']) ?>">
             <label for="password">Mot de passe *<input type="password" id="password" name="password" required autofocus></label>

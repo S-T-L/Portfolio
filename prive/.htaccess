@@ -2,7 +2,7 @@
   Require all denied
 </Files>
 
-# Les fiches passent par fiche.php
-<FilesMatch "\.pdf$">
+# Les fiches passent par fiche.php, les vidéos par video.php
+<FilesMatch "\.(pdf|mp4)$">
   Require all denied
 </FilesMatch>

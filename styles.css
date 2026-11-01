@@ -326,6 +326,7 @@ a.carte:hover { border-color: var(--cuivre); transform: translateY(-4px); box-sh
 }
 .connexion { max-width: 480px; }
 .connexion > p { margin: 12px 0 26px; font-size: 15px; color: var(--txt-sombre-2); }
+.video-cv { display: block; width: 100%; max-width: 900px; border-radius: 6px; background: #000; }
 .formulaire--simple { grid-template-columns: 1fr; }
 .erreur { font-size: 14px; font-weight: 600; color: #a33a2a; }
 
