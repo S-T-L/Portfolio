@@ -2,7 +2,7 @@
 // Gestion de la session et du journal.
 require_once __DIR__ . '/../config.php';
 
-date_default_timezone_set('Europe/Paris');
+date_default_timezone_set('Pacific/Noumea');
 
 // Durées en secondes : 30 min, 2 h, 15 min, 180 jours
 const SESSION_INACTIVITE = 1800;
